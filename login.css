@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ececec;
+}
+@keyframes fade-up {
+    0%{
+        opacity: 0;
+        transform: translate(50px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+@keyframes fade-down{
+    0%{
+        opacity: 0;
+        transform: translate(-50px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+#mainNavbar{
+    animation: fade-down 0.5s;
+}
+.login{
+    animation: fade-up 0.5s;
+}
+/* Navigation and footer */
+.navigation {
+    min-height: 9vh;
+    width: 100%;
+    background: rgb(33, 32, 68);
+    background: linear-gradient(90deg, rgba(33, 32, 68, 1) 0%, rgba(75, 38, 99, 1) 44%, rgba(51, 10, 91, 1) 100%);
+}
+.nav-link{
+    position: relative;
+    text-decoration: none;
+    margin-right: 1.5em;
+    color: white;
+    padding: 0 10px;
+}
+.nav-link::after{
+    content: "";
+    position: absolute;
+    background-color: rebeccapurple;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.nav-link:hover::after{
+    width: 100%;
+}
+.nav-link:hover{
+   color: rebeccapurple;
+}
+
+#title {
+    white-space: nowrap;
+    font-size: 3em;
+}
+
+#titleImage {
+    margin-bottom: 100px;
+}
+
+#titledescription {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#description {
+    color: white;
+}
+
+#cards h2 {
+    font-weight: 600;
+}
+
+#cards {
+    text-align: center;
+}
+
+.navbar.scrolled {
+    background-color: #240046;
+    transition: background 500ms ease-in-out;
+}
+
+.footer {
+    background-color: #240046;
+}
+
+.icons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.icons i {
+    font-size: 1.5em;
+    color: black;
+    opacity: 0.9;
+}
+
+.icons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.icons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+.contact i {
+    font-size: 1.5em;
+}
+
+.contact span {
+    margin-left: 0.2em;
+    font-size: 1.2em;
+    margin-right: 0.8em;
+}
+
+/* Login */
+.login_image{
+    width: 250px;
+}
+.box-area{
+    width: 930px;
+}
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+::placeholder{
+    font-size: 16px;
+}
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+@media only screen and (max-width: 768px){
+     .box-area{
+        margin: 0 10px;
+     }
+     .left-box{
+        height: auto;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+     .nav-link{
+        background-color: #240046;
+        padding-top: 15px;
+     }
+}

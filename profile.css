@@ -1,0 +1,257 @@
+
+@keyframes fade-up {
+    0%{
+        opacity: 0;
+        transform: translate(50px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+@keyframes fade-down{
+    0%{
+        opacity: 0;
+        transform: translate(-50px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+.profile-area{
+    padding: 50px 0;
+    margin: 0 50px;
+    margin-left: 70px;
+}
+.card{
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+    border-radius: 15px;
+}
+.card{
+    width: 80%;
+}
+.img1 img{
+    height: 200px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 100%;
+}
+.img2 img{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 7px solid #FFF;
+    margin-top: -80px;
+}
+.card:hover .img2 img{
+    border-color: rebeccapurple;
+    transition: .7s;
+}
+.main-text{
+    padding: 30px 0;
+    text-align: center;
+}
+.main-text h2{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 25px;
+    margin: 0 0 5px;
+}
+.main-text h4{
+    text-transform: capitalize;
+    color: #777;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.thomas{
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0 35px;
+    margin-bottom: 40px;
+}
+.workExperiece{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.socials{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.socials a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+.socials i{
+    font-size: 20px;
+    color: rebeccapurple;
+    padding: 0 10px;
+}
+.socials a:hover i {
+    color: black;
+    transition: 0.5s;
+}
+
+body {
+    font-family: 'Roboto', roboto sans-serif;
+}
+.navigation {
+    min-height: 30vh;
+    width: 100%;
+    background: rgb(33, 32, 68);
+    background: linear-gradient(90deg, rgba(33, 32, 68, 1) 0%, rgba(75, 38, 99, 1) 44%, rgba(51, 10, 91, 1) 100%);
+    /* background:  url(https://images.unsplash.com/photo-1583339522870-0d9f28cef33f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover; */
+}
+#mainNavbar , #header{
+    animation: fade-down 0.5s;
+}
+.profile-area{
+    animation: fade-up 0.5s;
+}
+
+/* hover effect for navigation */
+.nav-link{
+    position: relative;
+    text-decoration: none;
+    margin-right: 1.5em;
+    color: white;
+    padding: 0 10px;
+}
+.nav-link::after{
+    content: "";
+    position: absolute;
+    background-color: rebeccapurple;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.nav-link:hover::after{
+    width: 100%;
+}
+.nav-link:hover{
+   color: rebeccapurple;
+}
+h1{
+    font-size: 60px;
+}
+#header {
+    margin-top: 130px;
+}
+
+#title {
+    font-weight: 700;
+    white-space: nowrap;
+    font-size: 3em;
+}
+
+#titledescription {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#description {
+    color: white;
+}
+
+
+/* Navbar scrolled */
+.navbar.scrolled {
+    background-color: #240046;
+    transition: background 500ms ease-in-out;
+}
+/* footer */
+.footer {
+    background-color: #240046;
+}
+.icons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.icons i {
+    font-size: 1.5em;
+    color: black;
+    opacity: 0.9;
+}
+
+.icons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.icons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.contact i {
+    font-size: 1.5em;
+}
+
+.contact span {
+    margin-left: 0.2em;
+    font-size: 1.2em;
+    margin-right: 0.8em;
+}
+.secondRow{
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .secondRow{
+        width: 80%;
+    }
+    body{
+        margin-left: 0px;
+    }
+    .card{
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+    body{
+        margin-left: 0px;
+    }
+    .card{
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .card{
+        width: 100%;
+    }
+
+}
+
+@media(min-width: 768px) {
+    .card{
+        width: 100%;
+    }
+}
+@media(min-width: 1200px){
+    .card{
+        width: 80%;
+        height: 100%;
+    }
+    .profile-area{
+        margin-left: 140px;
+    }
+}
